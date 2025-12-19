@@ -38,7 +38,7 @@ class ContactPayload(BaseModel):
 def send_email(payload: ContactPayload) -> None:
     msg = EmailMessage()
     msg["Subject"] = f"New message from {payload.name}"
-    msg["From"] = {payload.email}
+    msg["From"] = payload.email
     msg["To"] = "abrahantolentinov@gmail.com"
 
     msg.set_content(f"""

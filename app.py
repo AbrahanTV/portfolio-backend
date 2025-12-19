@@ -15,9 +15,9 @@ origins_env = os.getenv("CORS_ORIGINS")
 if origins_env:
     allowed_origins = [o.strip() for o in origins_env.split(",") if o.strip()]
 else:
-    allowed_origins = ["https://www.abrahantolentino.com/"]
+    allowed_origins = ["https://www.abrahantolentino.com"]
 
-CORS(app, origins=["https://www.abrahantolentino.com/"])
+CORS(app, origins=["https://www.abrahantolentino.com"])
 
 
 
@@ -74,4 +74,4 @@ def contact():
     return jsonify({'message': 'Email sent successfully'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    """ app.run(debug=True) """

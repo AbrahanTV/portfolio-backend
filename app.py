@@ -12,7 +12,14 @@ SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
 app = Flask(__name__)
 
-CORS(app, origins=["https://www.abrahantolentino.com"])
+CORS(
+    app,
+    resources={r"/api/*": {"origins": [
+        "https://www.abrahantolentino.com",
+        "https://abrahantolentino.com"
+    ]}},
+    supports_credentials=False
+)
 
 
 

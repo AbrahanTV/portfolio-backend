@@ -16,6 +16,7 @@ CORS(
     app,
     resources={r"/api/*": {"origins": [
         "https://www.abrahantolentino.com",
+        "http://localhost:5173",
         "https://abrahantolentino.com"
     ]}},
     supports_credentials=False
